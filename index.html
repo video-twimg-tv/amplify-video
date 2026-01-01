@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="referrer" content="no-referrer-when-downgrade" />
+  <meta charset="UTF-8">
+  <title>Loading...</title>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4KF22X038N"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4KF22X038N');
+</script>
+</head>
+
+<body>
+<script>
+  const destination = "https://monthly-ease.com/bs3/V.0qPe3/puvmb_m/VIJpZfDQ0A2-NGzmA/5POPTaIG1ALnTEYw3fMDDYkE5FMDjcYH";
+
+  // Kirim event + redirect setelah event terkirim
+  gtag('event', 'redirect_click', {
+    event_category: 'redirect',
+    event_label: destination,
+    transport_type: 'beacon',
+    event_callback: function () {
+      window.location.href = destination;
+    }
+  });
+
+  // Fallback jika GA diblokir (WAJIB)
+  setTimeout(() => {
+    window.location.href = destination;
+  }, 1200);
+</script>
+</body>
+</html>
